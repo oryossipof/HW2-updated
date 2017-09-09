@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/mine">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Difficulty"
+            android:text="Select Difficulty"
+            android:textAlignment="center"
+
+            android:textSize="80px"
+            tools:text="Select Difficulty"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="61dp" />
+
+        <Button
+            android:id="@+id/easy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="0dp"
+            android:text="Easy"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/but"
+            android:layout_marginTop="104dp" />
+
+        <Button
+            android:id="@+id/mid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="0dp"
+            android:text="medium"
+            android:layout_below="@+id/easy"
+            android:background="@drawable/but"
+            android:layout_marginTop="33dp"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/Hard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="0dp"
+            android:text="Hard"
+            android:layout_below="@+id/mid"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/but"
+            android:layout_marginTop="33dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

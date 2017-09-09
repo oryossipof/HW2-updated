@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundgame">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mine Sweeper"
+            android:text="Mine Sweeper"
+            android:textAlignment="center"
+
+            android:textSize="80px"
+            tools:text="Mine Sweeper"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="61dp" />
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/but"
+            android:elevation="0dp"
+            android:text="Play"
+
+            android:layout_above="@+id/records_button"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="31dp" />
+
+
+        <Button
+            android:id="@+id/records_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/but"
+            android:elevation="0dp"
+            android:text="Records Table"
+            android:layout_marginBottom="36dp"
+            android:layout_above="@+id/exit_bt"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/exit_bt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/but"
+            android:elevation="0dp"
+            android:text="Exit"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="59dp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

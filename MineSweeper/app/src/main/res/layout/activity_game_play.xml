@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/mine">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/newGameBt"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_centerHorizontal="true"
+
+
+            android:background="@drawable/newgame"
+
+
+            />
+
+
+        <TextView
+            android:id="@+id/NumOfFlagsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:layout_toStartOf="@+id/newGameBt"
+            android:background="#000000"
+            android:ems="4"
+            android:inputType="number"
+            android:text="3:00"
+            android:textAlignment="center"
+            android:textColor="#f00"
+
+            android:textSize="45dp"
+
+
+            />
+
+
+        <TextView
+            android:id="@+id/TimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+
+            android:background="#000"
+            android:inputType="number"
+            android:text="0"
+            android:textColor="#f00"
+            android:ems="4"
+            android:textSize="45dp"
+            android:layout_alignBaseline="@+id/NumOfFlagsText"
+            android:layout_alignBottom="@+id/NumOfFlagsText"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/newGameBt" />
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/winner"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/winner"
+            android:visibility="invisible"
+            />
+
+        <com.example.minesweeper.Grid
+            android:id="@+id/mineSwepperGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/newGameBt"
+            android:layout_marginTop="5dp">
+
+
+        </com.example.minesweeper.Grid>
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/bombExploded"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bibi"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

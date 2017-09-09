@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/mine">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mine Sweeper"
+            android:text="Mine Sweeper"
+            android:textAlignment="center"
+
+            android:textSize="80px"
+            tools:text="Mine Sweeper"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="61dp" />
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/but"
+            android:elevation="0dp"
+            android:text="Play"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginTop="104dp" />
+
+        <Button
+            android:id="@+id/exit_bt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/but"
+            android:elevation="0dp"
+            android:text="Exit"
+            android:layout_below="@+id/play_button"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="63dp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

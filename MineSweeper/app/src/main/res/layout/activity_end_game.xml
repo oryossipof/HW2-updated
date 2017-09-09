@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.example.minesweeper.EndGame">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+    <TextView
+        android:id="@+id/Youwon_lose_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You "
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="150dp"
+        />
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Time Is: "
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_below="@+id/Youwon_lose_Label"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/enterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Name: "
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_below="@+id/timeLabel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/nameText"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:layout_marginTop="20dp"
+            android:hint="Your Name"
+            android:layout_below="@+id/enterName"
+            android:layout_centerHorizontal="true"
+
+
+            />
+
+
+
+    <Button
+        android:id="@+id/okBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:layout_below="@+id/nameText"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+
+
+        />
+
+</RelativeLayout>
+</LinearLayout>
