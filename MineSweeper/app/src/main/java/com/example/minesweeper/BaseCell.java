@@ -60,6 +60,8 @@ public abstract  class BaseCell extends View {
         invalidate();
     }
 
+
+
     public boolean isClicked() {
         return isClicked;
     }
@@ -101,4 +103,8 @@ public abstract  class BaseCell extends View {
         invalidate();
     }
 
+    public void setUnRevealed() {
+        isRevealed = false;
+        invalidate();
+    }
 }

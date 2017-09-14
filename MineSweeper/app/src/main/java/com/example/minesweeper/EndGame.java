@@ -83,6 +83,7 @@ mcontext= this;
                                 Intent intent = new Intent(EndGame.this,High_score.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
+                                finish();
                             } else {
                                 gps.showSettingsAlert();
                                 latitude = gps.getLatitude();

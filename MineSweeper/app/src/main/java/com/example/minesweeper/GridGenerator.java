@@ -1,7 +1,9 @@
 package com.example.minesweeper;
 
         import android.util.Log;
+        import android.widget.Toast;
 
+        import java.util.ArrayList;
         import java.util.Random;
 
 /**
@@ -9,7 +11,10 @@ package com.example.minesweeper;
  */
 
 public class GridGenerator {
+public static int[][] grid;
 
+    public static ArrayList<Integer> xlist = new ArrayList<Integer>();
+    public static ArrayList<Integer> ylist = new ArrayList<Integer>();
 
 
 
@@ -19,7 +24,7 @@ public class GridGenerator {
 
 
         Random rn = new Random();
-        int [][] grid = new int[width][height];
+         grid = new int[width][height];
 
 
         //create the game grid
@@ -42,14 +47,27 @@ public class GridGenerator {
                 boomNumber--;
             }
 
+
         }
+
+
         Log.e("Number of booms After:" , boomNumber + " " );
         grid = calculateNeighbours(grid,width,height);
+
+        createXlistAndYlist(grid ,width,height );
         return  grid;
     }
 
+    private static void createXlistAndYlist(int[][] grid, int width, int height) {
 
-
+        for (int x = 0; x < width; x++)
+            for (int y = 0; y < height; y++) {
+                if (grid[x][y] != -1) {
+                    xlist.add(x);
+                    ylist.add(y);
+                }
+            }
+    }
 
     public  static int[][] calculateNeighbours(int[][] grid, final int  width , final int height)
     {
@@ -108,4 +126,48 @@ public class GridGenerator {
         }
         return false;
     }
+
+
+
+    public static int [][] addBombAndGenerate(int boomNumber,final int width ,final int height)
+    {
+
+        Random rn = new Random();
+
+       int pos1 =  rn.nextInt(xlist.size() - 0 + 1);
+
+        grid[xlist.get(pos1)][ylist.get(pos1)] = -1;
+        grid = calculateNeighbours(grid,width,height);
+        xlist.remove(pos1);
+        ylist.remove(pos1);
+
+
+        //creates booms and place them on the grid
+        Log.e("Number of booms before:" , boomNumber+ " ");
+/*
+                for(int x = 0; x<width; x++)
+                {
+
+                        for (int y = 0; y < height; y++) {
+
+                            if (grid[x][y] != -1) {
+                                grid[x][y] = -1;
+                                boomNumber--;
+                                grid = calculateNeighbours(grid,width,height);
+                                return  grid;
+
+                        }
+                    }
+                }
+
+*/
+
+
+        Log.e("Number of booms After:" , boomNumber + " " );
+       // grid = calculateNeighbours(grid,width,height);
+        return  grid;
+    }
+
+
+
 }

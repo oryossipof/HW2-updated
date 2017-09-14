@@ -45,7 +45,7 @@ public class Logic {
 
 
 
-    private Cell[][] mineSweep = new Cell[width][height];
+    public static Cell[][] mineSweep = new Cell[width][height];
 
 
     private Context context;
@@ -83,7 +83,7 @@ public class Logic {
 
     }
 
-    private void setGrid(Context context, final int[][] grid) {
+    public static void setGrid(Context context, final int[][] grid) {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
 
@@ -105,7 +105,7 @@ public class Logic {
     }
 
 
-    public Cell getCellPos(int x, int y) {
+    public static Cell getCellPos(int x, int y) {
         return mineSweep[x][y];
     }
 
@@ -204,9 +204,6 @@ public class Logic {
             }
 
 
-
-
-
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -214,7 +211,7 @@ public class Logic {
                     //intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                     intent.putExtra("result", "won");
                     intent.putExtra("timer", GamePlay.j-1);
-                  //  intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
 
                     context.startActivity(intent);
@@ -232,6 +229,7 @@ public class Logic {
         Toast.makeText(context, "Game Lost", Toast.LENGTH_SHORT).show();
         GamePlay.stopTimer();
         GamePlay.setBombVisible();
+        GamePlay.stopSensor();
 
 
 
@@ -284,7 +282,7 @@ public class Logic {
                 Intent intent = new Intent(context,EndGame.class);
              //   intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 intent.putExtra("result", "Lost");
-             //   intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 context.startActivity(intent);
             }
         },max);
@@ -292,6 +290,32 @@ public class Logic {
 
 
 
+    }
+
+    public static void setGrid2(Context context, final int[][] grid) {
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+
+                if (mineSweep[x][y] == null) {
+                    mineSweep[x][y] = new Cell(context, x,y);
+                    mineSweep[x][y].invalidate();
+                }
+                if (mineSweep[x][y].getValue() != grid[x][y])
+                {
+
+                    mineSweep[x][y].setValue(grid[x][y]);
+                    getCellPos(x,y).setUnRevealed();
+                    mineSweep[x][y].invalidate();
+
+
+                }
+                else {
+                    mineSweep[x][y].setValue(grid[x][y]);
+                    //mineSweep[x][y].invalidate();
+                }
+
+            }
+        }
     }
 
 

@@ -63,6 +63,17 @@
             android:layout_marginTop="33dp" />
 
 
+        <Button
+            android:id="@+id/levelHighBT"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/Hard"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/but"
+            android:layout_marginTop="33dp"
+            android:text="High Scores" />
+
+
     </RelativeLayout>
 
 </LinearLayout>

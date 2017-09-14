@@ -34,6 +34,16 @@ public class level extends Activity {
             }
         });
 
+        final Button records =(Button) findViewById(R.id.levelHighBT);
+        records.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(level.this,High_score.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
 
         final Button play2 =(Button) findViewById(R.id.mid);
         play2.setOnClickListener(new View.OnClickListener() {
