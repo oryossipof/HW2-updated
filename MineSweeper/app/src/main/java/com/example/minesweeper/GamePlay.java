@@ -79,7 +79,7 @@ public class GamePlay extends Activity implements SensorEventListener {
 
         numberOfMinesView = (TextView) findViewById(R.id.NumOfFlagsText);
         numberOfMinesView.setText("" + numberOfMines);
-        bomb = (GifImageView) findViewById(R.id.bombExploded);
+       bomb = (GifImageView) findViewById(R.id.bombExploded);
         bomb.setVisibility(GifImageView.INVISIBLE);
         winner = (GifImageView) findViewById(R.id.winner);
         winner.setVisibility(GifImageView.INVISIBLE);
@@ -150,7 +150,7 @@ public class GamePlay extends Activity implements SensorEventListener {
         sm.unregisterListener(mlistener,accelerometer);
         //accelerometer = null;
         //sensorThread.quit();
-        Log.e("ONsTOPP" ,"13213213");
+
 
     }
 
@@ -169,7 +169,7 @@ public class GamePlay extends Activity implements SensorEventListener {
         sensorThread.interrupt();
         accelerometer = null;*/
 
-        Log.e("OnDESTROY" ,"13213213");
+
     }
 
 
@@ -178,7 +178,7 @@ public class GamePlay extends Activity implements SensorEventListener {
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e("OnRESUME" ,"13213213");
+
         return;
 
     }
@@ -192,7 +192,7 @@ public class GamePlay extends Activity implements SensorEventListener {
         super.onPause();
         sm.unregisterListener(mlistener,accelerometer);
        /* sm.unregisterListener(this);
-        Log.e("OnPAUSE" ,"13213213");
+
 
         accelerometer = null;*/
 

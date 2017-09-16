@@ -34,6 +34,7 @@ public class Cell extends  BaseCell implements View.OnClickListener , View.OnLon
 
     @Override
     public void onClick(View view) {
+
         Logic.getInstance().click(getXPos(),getYPos());
 
     }
@@ -54,8 +55,8 @@ public class Cell extends  BaseCell implements View.OnClickListener , View.OnLon
 
     @Override
     protected void onDraw(Canvas canvas) {
+
         super.onDraw(canvas);
-        Log.e("draw method", "");
         drawButton(canvas);
 
         if (isFlagClick())
@@ -87,6 +88,7 @@ public class Cell extends  BaseCell implements View.OnClickListener , View.OnLon
 
     private void drawFlag( Canvas canvas)
     {
+
         Drawable draw = ContextCompat.getDrawable(getContext(),R.drawable.flag);
         draw.setBounds(0,0,getWidth(),getHeight());
         draw.draw(canvas);
@@ -104,6 +106,7 @@ public class Cell extends  BaseCell implements View.OnClickListener , View.OnLon
 
 
     private void drawButton(Canvas canvas) {
+
 
         Drawable draw = ContextCompat.getDrawable(getContext(),R.drawable.gamebt);
                     draw.setBounds(0,0,getWidth(),getHeight());
@@ -174,6 +177,7 @@ public class Cell extends  BaseCell implements View.OnClickListener , View.OnLon
 
         draw.setBounds(0,0,getWidth(),getHeight());
         draw.draw(canvas);
+
     }
 
 

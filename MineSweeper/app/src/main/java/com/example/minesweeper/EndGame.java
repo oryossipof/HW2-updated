@@ -163,7 +163,7 @@ mcontext= this;
     @Override
     protected void onPause() {
         super.onPause();
-       Log.e("ONPAUSE_ENDGAME", "PAUSE THE ACTIVITY");
+
 
         return;
     }

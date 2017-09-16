@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 
 public class level extends Activity {
 
@@ -31,6 +33,8 @@ public class level extends Activity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                GridGenerator.xlist = new ArrayList<Integer>();
+                GridGenerator.ylist = new ArrayList<Integer>();
             }
         });
 
@@ -41,6 +45,7 @@ public class level extends Activity {
                 Intent intent = new Intent(level.this,High_score.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+
             }
         });
 
@@ -58,6 +63,8 @@ public class level extends Activity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                GridGenerator.xlist = new ArrayList<Integer>();
+                GridGenerator.ylist = new ArrayList<Integer>();
             }
         });
 
@@ -74,6 +81,8 @@ public class level extends Activity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                GridGenerator.xlist = new ArrayList<Integer>();
+                GridGenerator.ylist = new ArrayList<Integer>();
             }
         });
 

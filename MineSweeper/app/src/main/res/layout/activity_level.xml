@@ -6,7 +6,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical"
-    android:background="@drawable/mine">
+    android:background="#000">
 
 
 
@@ -14,19 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Select Difficulty"
             android:text="Select Difficulty"
             android:textAlignment="center"
-
+            android:background="@drawable/difficulty"
             android:textSize="80px"
             tools:text="Select Difficulty"
             android:id="@+id/textView"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="61dp" />
+            android:layout_marginTop="10dp" />
 
         <Button
             android:id="@+id/easy"
@@ -37,7 +37,7 @@
             android:layout_below="@+id/textView"
             android:layout_alignParentStart="true"
             android:background="@drawable/but"
-            android:layout_marginTop="104dp"
+            android:layout_marginTop="20dp"
             />
 
         <Button

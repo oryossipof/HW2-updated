@@ -41,14 +41,14 @@ public class Logic {
     public static int width = 10;
     public static int height = 10;
     public static int numberOfMins = 5;
-    private int max = 0;
+    private static int max = 0;
 
 
 
     public static Cell[][] mineSweep = new Cell[width][height];
 
 
-    private Context context;
+    private static Context context;
 
 
     public static Logic getInstance() {
@@ -111,7 +111,7 @@ public class Logic {
 
 
     public void flag(int xPos, int yPos) {
-        Log.e("Flagged", "Now");
+
        if( getCellPos(xPos, yPos).isRevealed()) return;
         boolean isFlagged = getCellPos(xPos, yPos).isFlagClick();
 
@@ -190,7 +190,7 @@ public class Logic {
                     Animation animationFalling = AnimationUtils.loadAnimation(context, R.anim.slide_up);
                     //animationFalling.setDuration(rand.nextInt(5000 - 1000 + 1) + 1000);
                     int temp2;
-                    animationFalling.setDuration(temp2 = rand.nextInt(5000)+1000);
+                    animationFalling.setDuration(temp2 = rand.nextInt(3000)+1000);
                     if (temp2 > max)
                     {
                         max = temp2;
@@ -224,7 +224,7 @@ public class Logic {
         return false;
     }
 
-    private void endGame() {
+    public static void endGame() {
         //handle lost game
         Toast.makeText(context, "Game Lost", Toast.LENGTH_SHORT).show();
         GamePlay.stopTimer();
@@ -258,7 +258,7 @@ public class Logic {
               Animation animationFalling = AnimationUtils.loadAnimation(context, R.anim.slide_down);
               //animationFalling.setDuration(rand.nextInt(5000 - 1000 + 1) + 1000);
               int temp;
-              animationFalling.setDuration(temp = rand.nextInt(7000 - 2000 + 1) + 2000);
+              animationFalling.setDuration(temp = rand.nextInt(3000 - 2000 + 1) + 2000);
               if (temp > max)
               {
                   max = temp;
@@ -269,7 +269,7 @@ public class Logic {
               getCellPos(i,j).startAnimation(animationFalling);
           }
 
-          }
+    }
 
 
 

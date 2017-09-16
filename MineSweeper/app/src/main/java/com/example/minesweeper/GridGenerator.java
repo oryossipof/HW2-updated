@@ -131,19 +131,21 @@ public static int[][] grid;
 
     public static int [][] addBombAndGenerate(int boomNumber,final int width ,final int height)
     {
+        if (xlist.size() > 0 ) {
+            Random rn = new Random();
 
-        Random rn = new Random();
-
-       int pos1 =  rn.nextInt(xlist.size() - 0 + 1);
-
-        grid[xlist.get(pos1)][ylist.get(pos1)] = -1;
-        grid = calculateNeighbours(grid,width,height);
-        xlist.remove(pos1);
-        ylist.remove(pos1);
+            int pos1 = rn.nextInt(xlist.size() - 0);
 
 
-        //creates booms and place them on the grid
-        Log.e("Number of booms before:" , boomNumber+ " ");
+
+            grid[xlist.get(pos1)][ylist.get(pos1)] = -1;
+            grid = calculateNeighbours(grid, width, height);
+            xlist.remove(pos1);
+            ylist.remove(pos1);
+
+
+            //creates booms and place them on the grid
+
 /*
                 for(int x = 0; x<width; x++)
                 {
@@ -163,8 +165,13 @@ public static int[][] grid;
 */
 
 
-        Log.e("Number of booms After:" , boomNumber + " " );
-       // grid = calculateNeighbours(grid,width,height);
+
+            // grid = calculateNeighbours(grid,width,height);
+        }
+        else
+        {
+            Logic.endGame();
+        }
         return  grid;
     }
 
